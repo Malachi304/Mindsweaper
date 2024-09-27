@@ -44,3 +44,12 @@ a{
 
 p{
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+
+}
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 0px 10px;
+}
