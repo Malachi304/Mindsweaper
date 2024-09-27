@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+body{
+    background-image: url(../main-background.webp);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-page-link{
+
+    margin-bottom: 10px
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 1px white;
+    padding: 10px;
+}
+
+#container{
+    border-radius: 10px;
+    background-color: #61595B;
+    box-shadow: 8px 5px black;
+    border: 1px solid black;
+
+    padding: 30px;
+    width: 70vw;
+    height: 70vh;
+
+    overflow: auto;
+}
+
+p{
+}
