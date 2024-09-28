@@ -1,11 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: knight;
 }
 
 html, body{
     height: 100%;
 
+}
+
+@font-face {
+    font-family: knight;
+    src: url('KnightWarrior-w16n8.otf');
 }
 
 body{
@@ -15,19 +21,31 @@ body{
     justify-content: center;
     align-items: center;
 }
-#main-page-link{
 
-    margin-bottom: 10px
+#header{
+    display: flex;
+    align-items: center;
+}
+#header img{
+    height: 75px;
+    width: 75px;
 
 }
+#header #main-page-link{
+    margin-left: auto;
+}
+
 a{
     text-decoration: none;
     color: inherit;
     color: white;
     background-color: black;
-    box-shadow: 3px 1px white;
-    padding: 10px;
+    box-shadow: 3px 1px red;
+    padding: 20px;
+    margin-bottom: 10px;
 }
+
+
 
 #container{
     border-radius: 10px;
@@ -37,16 +55,29 @@ a{
 
     padding: 30px;
     width: 70vw;
-    height: 70vh;
+    height: 80vh;
 
     overflow: auto;
 }
+h1{
+    font-size: 5em;
+    text-shadow: 1px 1px red;
+    margin-right: 10px;
+}
+h3{
+    font-size: 2.5em;
+}
+
+h5{
+    font-size: 28px;
+}
 
 p{
+    font-size: 1.5em;
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 8px;
 
 }
 ::-webkit-scrollbar-thumb{
