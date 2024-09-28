@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: knight;
+}
+html, body{
+    height: 100%;
+}
+@font-face {
+    font-family: knight;
+    src: url('KnightWarrior-w16n8.otf');
+}
+
+
+body{
+    background-image: url(main-background.webp);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#container{
+    background-color: #61595B;
+    
+    height: 55vh;
+    width: 30vw;
+    box-shadow: 8px 5px black;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+}
+
+#header h1{
+    font-size: 40px;
+    text-shadow: 1px 1px red;
+}
+
+#header #main-page-link{
+    margin-left: auto;
+}
+#header a{
+    text-decoration: none;
+    color: inherit;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 1px red;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+#header a:hover{
+    box-shadow: 3px 1px white;
+    color: red;
+}
+hr{
+    margin-top: 10px;
+    padding: 2px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+form{
+    height: 80vh;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form input{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 1px black;
+    border: none;
+
+}
+
+
+form textarea{
+    box-shadow: 3px 1px black;
+}
+
+form #message{
+    width: 500px;
+    height: 250px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#submit-form{
+    background-color: black;
+    color: white;
+    box-shadow: 3px 1px red;
+
+}
+
+#submit-form:hover{
+    color:red; 
+    box-shadow: 3px 1px white;
+   
+}

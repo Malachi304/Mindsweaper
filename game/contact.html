@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/contact.css" rel="stylesheet">
     <title>Contact Page</title>
 </head>
 <body>
     <section id="container">
-        <h1>Contact Us</h1>
-        <ul>
-            <li>Email</li>
-            <li>Github</li>
-            <li>N/A</li>
+        <div id="header">
+            <h1>Contact Us</h1>
+            <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
+        </div>
 
-        </ul>
+        <hr>
+        
+        <form>
+            <h1>Leave Us a Message!</h1>
+            <input type="text" id="name" placeholder="Name" required>
+
+            <textarea id="message" required></textarea>
+
+            <input type="submit" id="submit-form">
+        </form>
     </section>
 </body>
 </html>
