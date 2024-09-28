@@ -9,7 +9,7 @@ html, body{
 }
 
 body{
-    background-image: url(../main-background.webp);
+    background-image: url(main-background.webp);
 
     display: flex;
     justify-content: center;
