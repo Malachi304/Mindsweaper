@@ -85,9 +85,10 @@ li:hover{
 a{
     text-decoration: none;
     color: inherit;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+.wide-link {
+    padding: 30px;/* Increases clickable area */
+    width: 100%; /* Fixed width or make it relative to the container */
+    height: 100%;
 }
 
