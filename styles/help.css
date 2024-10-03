@@ -44,6 +44,10 @@ a{
     padding: 20px;
     margin-bottom: 10px;
 }
+#header a:hover{
+    box-shadow: 3px 1px white;
+    color: red;
+}
 
 #container{
     border-radius: 10px;
