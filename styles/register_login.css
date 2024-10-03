@@ -22,20 +22,21 @@ body{
     align-items: center;
 }
 
-#header{
+#header-reg , #header-log{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    height: 100%;
-
+    margin-bottom: 0px;
+    background-color: green;
 }
 
-#header #main-page-link{
+
+#header-log #main-page-link, #header-reg #main-page-link{
     margin-top: 10px;
 }
-#header h1{
+#header-log h1, #header-reg h1{
     font-size: 5em;
     text-shadow: 1px 1px red;
 }
@@ -56,32 +57,35 @@ a:hover{
     border-radius: 10px;
     background-color: #61595B;
     box-shadow: 8px 5px black;
-    border: 1px solid black;
+    border: 5px solid black;
+    padding: 10px;
 
-    padding: 50px;
-    max-width: 40vw;
-    max-height: 50vh;
+    width: 50vw;
+    height: 70vh;
 
     overflow: auto;
-
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 
 }
 
-#login-form{
+#register-form, #login-form{
     display: flex;
     flex-direction: column;
-    align-items:center ;
-    padding: 5px;
+    align-items:center;
+    padding: 30px;
+    border: 5px solid red;
 
 }
-
-form{
+#register-form form, #login-form form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-top: 30px;
+    background-color: blue;
+    align-items: center;
 }
 input{
     margin-bottom: 20px;

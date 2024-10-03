@@ -9,35 +9,35 @@
 </head>
 <body>
     <article id="container">
-        <section id ="register-form" style="display: none;">
-            <div id="header">
+        <section id ="register-form" style="display: none;" >
+            <div id="header-reg">
                 <h1>Register Account</h1>
                 <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
             </div>
             <form  method="post" action="register.php">
                 <div class="input-group">
-                    <input type="text" name="uname" id="user_name" placeholder="" required>
-                    <label for="uname">Username</label>
+                    <input type="text" name="uname" id="user_name" placeholder="Username" required>
+                    <label for="uname"></label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="password" id="user_password" placeholder="" required >
-                    <label for="password">Set Password</label>
+                    <input type="password" name="password" id="user_password" placeholder="Set Password" required >
+                    <label for="password"></label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="" id="verify_password" placeholder="" required>
-                    <label for="password">Retype Password</label>
+                    <input type="password" name="" id="verify_password" placeholder="Retype Password" required>
+                    <label for="password"></label>
                 </div>
                 <input type="submit" class="btn" value="Sign Up" name="SignUp">                
 
             </form>
-                <h6>-----Or-----</h6>
-                <button id="LogInButton">Log In</button>   
+            <h6>-----Or-----</h6>
+            <button id="LogInButton">Log In</button>   
 
         </section>
 
 
-        <section id="login-form">
-            <div id="header">
+        <section id="login-form" >
+            <div id="header-log">
                 <h1>Login</h1>
                 <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
             </div>
@@ -52,13 +52,13 @@
                 </div>
                 <input type="submit" class="btn" value="Log In" name="LogIn">
                 </form>
-                <h6>-----Or-----</h6>
-                <button id="SignUpButton">Sign Up</button>   
+            <h6>-----Or-----</h6>
+            <button id="SignUpButton">Sign Up</button>   
         </section>
 
              
 
     </article>
 </body>
-    <script src="../public/register-login.js"></script>
+    <script src="register_login.js"></script>
 </html>
