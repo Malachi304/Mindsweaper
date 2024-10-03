@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/register_login.css" rel="stylesheet">
     <title>Register or Login</title>
 </head>
 <body>
     <article id="container">
-        <div><a href="index.html">Return To Menu</a></div>
         <section id ="register-form" style="display: none;">
-            <h2>Register Account</h2>
+            <div id="header">
+                <h1>Register Account</h1>
+                <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
+            </div>
             <form  method="post" action="register.php">
                 <div class="input-group">
                     <input type="text" name="uname" id="user_name" placeholder="" required>
@@ -34,15 +37,18 @@
 
 
         <section id="login-form">
-            <h2>Login</h2>
+            <div id="header">
+                <h1>Login</h1>
+                <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
+            </div>
             <form method="post" action="login.php">
                 <div class="input-group">
-                    <input type="text" name="uname_email_login" id="username_email_login" placeholder="" required>
-                    <label for="uname_email_login">Username or Email</label>
+                    <input type="text" name="uname_email_login" id="username_email_login" placeholder="Username Or Email" required>
+                    <label for="uname_email_login"></label>
                 </div>
                 <div class="input-group">
                     <input type="password" name="password" id="user_password" placeholder="Enter Password" required>
-                    <label for="passwprd">Enter Password</label>
+                    <label for="passwprd"></label>
                 </div>
                 <input type="submit" class="btn" value="Log In" name="LogIn">
                 </form>

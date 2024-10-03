@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: knight;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+@font-face {
+    font-family: knight;
+    src: url('KnightWarrior-w16n8.otf');
+}
+
+body{
+    background-image: url(main-background.webp);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+
+#header #main-page-link{
+    margin-top: 10px;
+}
+#header h1{
+    font-size: 5em;
+    text-shadow: 1px 1px red;
+}
+a{
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 1px red;
+    padding: 5px;
+    background-color: black;
+}
+a:hover{
+    color: red;
+    box-shadow: 3px 1px white;
+}
+
+
+#container{
+    border-radius: 10px;
+    background-color: #61595B;
+    box-shadow: 8px 5px black;
+    border: 1px solid black;
+
+    padding: 50px;
+    max-width: 40vw;
+    max-height: 50vh;
+
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    padding: 5px;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+input{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+button{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 1px red;
+}
+
+button:hover{
+    color: red;
+    box-shadow: 3px 1px white;
+}
+
