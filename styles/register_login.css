@@ -25,11 +25,13 @@ body{
 #header-reg , #header-log{
     display: flex;
     align-items: center;
+    justify-content: center ;
     flex-direction: column;
+
     padding: 10px;
     width: 100%;
     margin-bottom: 0px;
-    background-color: green;
+    background-color: blue;
 }
 
 
@@ -37,7 +39,7 @@ body{
     margin-top: 10px;
 }
 #header-log h1{
-    font-size: 5em;
+    font-size: 2em;
     text-shadow: 1px 1px red;
 }
 #header-reg h1{
@@ -55,8 +57,6 @@ a:hover{
     color: red;
     box-shadow: 3px 1px white;
 }
-
-
 #container{
     border-radius: 10px;
     background-color: #61595B;
@@ -71,25 +71,24 @@ a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
+    
 }
-
 #register-form, #login-form{
     display: flex;
     flex-direction: column;
     align-items:center;
     padding: 30px;
     margin-top: 30px;
-    border: 5px solid red;
-
+    border: 5px solid black;
+    border-radius: 10px;
 }
 #register-form form, #login-form form{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    background-color: blue;
     align-items: center;
+    background-color: red;
+
 }
 input{
     margin-bottom: 20px;
@@ -97,7 +96,7 @@ input{
 }
 
 button{
-    padding: 5px;
+    padding: 8px;
     color: white;
     background-color: black;
     box-shadow: 3px 1px red;
@@ -108,3 +107,9 @@ button:hover{
     box-shadow: 3px 1px white;
 }
 
+#footer-reg, #footer-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
