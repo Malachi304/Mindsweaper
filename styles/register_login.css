@@ -31,7 +31,6 @@ body{
     padding: 10px;
     width: 100%;
     margin-bottom: 0px;
-    background-color: blue;
 }
 
 
@@ -87,7 +86,6 @@ a:hover{
     flex-direction: column;
     margin-top: 30px;
     align-items: center;
-    background-color: red;
 
 }
 input{
