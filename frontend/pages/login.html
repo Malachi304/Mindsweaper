@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/login.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div id="container">
+        <section id="login-form" >
+            <div id="header-log">
+                <h1>Login</h1>
+                <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
+            </div>
+            <form method="post" action="login.php">
+                <div class="input-group">
+                    <input type="text" name="uname_email_login" id="username_email_login" placeholder="Username Or Email" required>
+                    <label for="uname_email_login"></label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="user_password" placeholder="Enter Password" required>
+                    <label for="passwprd"></label>
+                </div>
+                <input type="submit" class="btn" value="Log In" name="LogIn">
+            </form>
+            <div id="footer-log">
+                <h6>-----Or-----</h6>
+                <a id="SignUpButton" href="register.html">Sign Up</a> 
+            </div>  
+        </section>
+    </div>
+    
+</body>
+</html>

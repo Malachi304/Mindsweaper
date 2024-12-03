@@ -22,7 +22,7 @@ body{
     align-items: center;
 }
 
-#header-reg , #header-log{
+#header-log{
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -34,25 +34,19 @@ body{
 }
 
 
-#header-log #main-page-link, #header-reg #main-page-link{
-    margin-top: 10px;
-}
 #header-log h1{
     font-size: 2em;
     text-shadow: 1px 1px red;
 }
-#header-reg h1{
-    font-size: 3em;
-    text-shadow: 1px 1px red;    
-}
-a{
+
+#header-log a{
     text-decoration: none;
     color: white;
     box-shadow: 3px 1px red;
     padding: 5px;
     background-color: black;
 }
-a:hover{
+#header-log a:hover{
     color: red;
     box-shadow: 3px 1px white;
 }
@@ -72,20 +66,21 @@ a:hover{
     flex-direction: column;
     
 }
-#register-form, #login-form{
+#login-form{
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items:center;
     padding: 30px;
     margin-top: 30px;
-    border: 5px solid black;
     border-radius: 10px;
 }
-#register-form form, #login-form form{
+#login-form form{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
     align-items: center;
+    text-align: center;
 
 }
 input{
@@ -93,19 +88,20 @@ input{
     padding: 10px;
 }
 
-button{
+#SignUpButton{
+    text-decoration: none;
     padding: 8px;
     color: white;
     background-color: black;
     box-shadow: 3px 1px red;
 }
 
-button:hover{
+#SignUpButton:hover{
     color: red;
     box-shadow: 3px 1px white;
 }
 
-#footer-reg, #footer-log{
+#footer-log{
     display: flex;
     justify-content: center;
     align-items: center;
