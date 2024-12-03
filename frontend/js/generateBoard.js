@@ -1,5 +1,5 @@
-const game = document.getElementById('game')
+let game_table_container = document.getElementById('game-board')
 
-function generate_board(){
+function create_table(){
     
 }

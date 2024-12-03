@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: knight;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+@font-face {
+    font-family: knight;
+    src: url('KnightWarrior-w16n8.otf');
+}
+
+body{
+    background-image: url(main-background.webp);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-reg{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+
+#header-reg #main-page-link{
+    margin-top: 10px;
+}
+
+#header-reg h1{
+    font-size: 2em;
+    text-shadow: 1px 1px red;    
+}
+#header-reg a{
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 1px red;
+    padding: 5px;
+    background-color: black;
+}
+#header-reg a:hover{
+    color: red;
+    box-shadow: 3px 1px white;
+}
+#container{
+    border-radius: 10px;
+    background-color: #61595B;
+    box-shadow: 8px 5px black;
+    border: 5px solid black;
+    padding: 20px;
+
+    width: 30vw;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#register-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+#register-form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+
+}
+input{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+#footer-reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#LogInButton{
+    text-decoration: none;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 1px red;
+}
+
+#LogInButton:hover{
+    color: red;
+    box-shadow: 3px 1px white;
+}
