@@ -24,22 +24,61 @@ body{
     background-repeat: no-repeat;
 }
 
-#main-menu{
-    width: auto;
-    height: auto;
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
  
-    border-radius: 10px;
-    background-color: #61595B;
-    box-shadow: 8px 5px black;
 }
 
-#content{
+#leaderboard{
+    background-color: #61595B;
+    height: 50%;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 5px 3px black;
+
+    position: absolute;
+    top: 20%;
+    right: 1%;
+
+
+}
+
+#main-menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #61595B;
+
+    box-shadow: 8px 5px black;
+    border-radius: 10px;
+
+    width: 40%;
+    height: auto;
 }
 
-h1{
+#leaderboard h1{
+    text-align: center;
+    color: black;
+    text-shadow: 2px 1px red;
+    font-size: 2em;
+    font-family: knight;
+}
+#leaderboard hr{
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
+#main-menu h1{
     margin: auto;
     font-size: 5em;
     font-family: knight;
