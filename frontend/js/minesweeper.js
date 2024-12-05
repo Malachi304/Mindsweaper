@@ -1,13 +1,21 @@
 // Game settings
-const rows = 8; // Number of rows
-const cols = 8; // Number of columns
-const numMines = 10; // Number of mines
+const rows = 15; // Number of rows
+const cols = 15; // Number of columns
+const numMines = 30; // Number of mines
 
 let board = []; // 2D array for the board
 let revealed = []; // Tracks revealed cells
 
+let scoreDiv = document.getElementById("score");
+let score = 0;
+
 // Start a new game
 function startGame() {
+    if (timer !== null){
+        stopTimer();
+        resetTimer(); 
+    }
+    startTimer();
     createBoard();
     placeMines();
     calculateNumbers();
@@ -68,6 +76,9 @@ function renderBoard() {
             td.dataset.row = r;
             td.dataset.col = c;
             td.addEventListener("click", handleCellClick);
+            if (board[r][c] === "M") { // Check if cell contains a mine
+                td.textContent = "M"; // Display "M" if it's a mine
+            }
             tr.appendChild(td);
         }
         table.appendChild(tr);
@@ -93,7 +104,7 @@ function revealCell(row, col) {
     revealed[row][col] = true;
 
     if (board[row][col] === "M") {
-        cell.textContent = "💣";
+        cell.textContent = "M";
         cell.classList.add("mine");
         alert("Game Over!");
         startGame();
@@ -112,4 +123,31 @@ function revealCell(row, col) {
             }
         }
     }
+
+}
+
+let timer = null; // Stores the interval ID
+let elapsedTime = 0; // Tracks time in seconds
+
+// Start the timer
+function startTimer() {
+    if (timer !== null) return; // Prevent multiple timers
+
+    timer = setInterval(() => {
+        elapsedTime++; // Increment time by 1 second
+        document.getElementById('score').textContent = elapsedTime; // Update the timer display
+    }, 1000); // 1000ms = 1 second
+}
+
+// Stop the timer
+function stopTimer() {
+    clearInterval(timer); // Stops the timer
+    timer = null; // Reset the interval ID
+}
+
+// Reset the timer
+function resetTimer() {
+    stopTimer(); // Stop the timer if running
+    elapsedTime = 0; // Reset elapsed time
+    document.getElementById('timer').textContent = elapsedTime; // Reset display
 }
