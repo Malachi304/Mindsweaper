@@ -33,7 +33,7 @@
             )";
 
             if($conn->query($sql) === TRUE) {
-                echo "Table 'users' created successfully.<br>";
+                echo "Database $dbName and Table 'users' created successfully.<br>";
             } else{
                 die("Error creating table: " . $conn->error);
             }
@@ -42,12 +42,10 @@
             die("Error creating database: " . $conn->error);
         }
     } else {
-        echo "Database '$dbName' already exists.<br>";
         // Step 4: Switch to the database if it exists 
-         $conn->select_db($dbName);
+        $conn->select_db($dbName);
         echo "Connected to database '$dbName'.<br>";
     }
 
-    $conn->close();
 
 ?>

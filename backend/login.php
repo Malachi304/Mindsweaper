@@ -1,27 +1,47 @@
 <?php
 include 'config.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    if($name && $password !==null){
-        $sql = "SELECT * FROM users WHERE name = '$name'";
-        $result = $conn->query($sql);
+    // Check if both fields are filled
+    if ($name && $password) {
+        // Prepare a query to retrieve the user's password
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        # Check if the user exists
         if ($result->num_rows > 0) {
+            // Fetch the user data
             $row = $result->fetch_assoc();
-            if (password_verify($password, $row['password'])) {
-                session_start();
-                $_SESSION['name'] = $name;
-                header("Location: index.php");
+            
+            // Compare the entered password with the stored password
+            if ($password === $row['password']) {
+                echo "Login successful. Welcome, $name!";
+
+                // Set session variables
+                $_SESSION['username'] = $name;
+
+                header("Location: ../frontend/pages/index.html");
                 exit();
-            }else{
-                echo "Invalid password";
+            } else {
+                echo "Incorrect password.";
             }
-        }else{
-            echo "User not found";
+        } else {
+            echo "No user found with that username.";
         }
+
+        $stmt->close();
+    } else {
+        echo "Please fill in both fields.";
     }
 }
 
+$conn->close();
 ?>

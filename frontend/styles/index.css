@@ -24,11 +24,9 @@ body{
     background-repeat: no-repeat;
 }
 
-
-
 #main-menu{
-    width: 30%;
-    height: 80%;
+    width: auto;
+    height: auto;
  
     border-radius: 10px;
     background-color: #61595B;
@@ -51,6 +49,7 @@ h5{
     margin-bottom: 10px;
     margin: auto;
     font-family: knight;
+    font-size: 1.5em;
 }
 ul{
     padding-left: 0;
