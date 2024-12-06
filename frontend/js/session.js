@@ -1,6 +1,13 @@
 // AJAX to verify user login status and redirect if necessary
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Script loaded');
+
+    // Handle logout button click
+    document.getElementById('logout').addEventListener('click', () => {
+        fetch('../../backend/logout.php');
+        window.location.href = '../pages/login.html'; // Redirect to login page
+    });
+
+    // Check if the user is logged in, if not then redirect him to login page
     try {
         const response = await fetch('../../backend/session.php');
         console.log(response);
