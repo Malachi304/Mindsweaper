@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/game.css" rel="stylesheet">
     <title>Minesweeper</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        td {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            border: 1px solid black;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 18px;
-            cursor: pointer;
-            background-color: #ccc;
-        }
-        td.revealed {
-            background-color: #eee;
-            cursor: default;
-        }
-        td.mine {
-            background-color: red;
-        }
-    </style>
 </head>
 <body>
+    <div id="container">
+        <h1 style="text-align: center;">Minesweeper</h1>
+        <div style="text-align: center;">
+            <div id=score>Score: 0</div>
+            <div id="button-container">
+                <div id="main-page-link"><a href="index.html">Return To Menu</a></div>
+                <button id="start-button" onclick="startGame()" >Start Game</button>
 
-    <h1 style="text-align: center;">Minesweeper</h1>
-    <div style="text-align: center;">
-        <div id=score>Score: 0</div>
-        <button id="start-button" onclick="startGame()" >Start Game</button>
+            </div>
+        </div>
+        <div id="game-board" style="text-align: center;"></div>
     </div>
-    <div id="game-board" style="text-align: center;"></div>
 
     <script src="../js/minesweeper.js"></script>
 </body>
