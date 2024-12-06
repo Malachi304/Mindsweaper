@@ -35,21 +35,23 @@ body{
 
 
 #header-log h1{
-    font-size: 2em;
+    font-size: 4em;
     text-shadow: 1px 1px red;
 }
 
-#header-log a{
-    text-decoration: none;
-    color: white;
-    box-shadow: 3px 1px red;
-    padding: 5px;
+hr{
+    width: 100%;
+    border: 1px solid black;
+    width: 100%;
+    padding: 1px;
     background-color: black;
+
 }
-#header-log a:hover{
-    color: red;
-    box-shadow: 3px 1px white;
+
+h6{
+    font-size: 1.5em;
 }
+
 #container{
     border-radius: 10px;
     background-color: #61595B;
@@ -57,8 +59,8 @@ body{
     border: 5px solid black;
     padding: 20px;
 
-    width: 30vw;
-    height: 60vh;
+    width: auto;
+    height: auto;
 
     display: flex;
     justify-content: center;
