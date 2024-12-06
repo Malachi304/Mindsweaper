@@ -6,20 +6,30 @@ const numMines = 30; // Number of mines
 let board = []; // 2D array for the board
 let revealed = []; // Tracks revealed cells
 
+// score elements
 let scoreDiv = document.getElementById("score");
 let score = 0;
 
+// Used to keep track of game state
+let click_count = 0;
+let safe_squares = rows * cols - numMines; 
+let gameOver = false;
+
 // Start a new game
 function startGame() {
-    if (timer !== null){
-        stopTimer();
-        resetTimer(); 
-    }
-    startTimer();
+    // Reset game state
+    gameOver = false;
+    cloick_count = 0;
+    resetTimer();
+    
+    // Create the board
     createBoard();
     placeMines();
     calculateNumbers();
     renderBoard();
+    
+    // Update the start button
+    document.getElementById('start-button').innerHTML = 'Restart';
 }
 
 // Create the board structure
@@ -64,6 +74,7 @@ function calculateNumbers() {
 
 // Render the board in the HTML
 function renderBoard() {
+
     const gameBoard = document.getElementById("game-board");
     gameBoard.innerHTML = ""; // Clear previous board
 
@@ -89,6 +100,17 @@ function renderBoard() {
 
 // Handle cell click
 function handleCellClick(event) {
+
+    if (gameOver){
+        alert("You lost! Press 'Restart' to play again.");
+        return;
+    }
+
+    click_count++;
+    if(click_count > 0){
+        startTimer();
+    }
+
     const row = parseInt(event.target.dataset.row);
     const col = parseInt(event.target.dataset.col);
 
@@ -106,8 +128,10 @@ function revealCell(row, col) {
     if (board[row][col] === "M") {
         cell.textContent = "M";
         cell.classList.add("mine");
+        stopTimer();
         alert("Game Over!");
-        startGame();
+        gameOver = true;
+
         return;
     }
 
@@ -130,13 +154,14 @@ let timer = null; // Stores the interval ID
 let elapsedTime = 0; // Tracks time in seconds
 
 // Start the timer
-function startTimer() {
+function startTimer() {    
     if (timer !== null) return; // Prevent multiple timers
 
     timer = setInterval(() => {
         elapsedTime++; // Increment time by 1 second
-        document.getElementById('score').textContent = elapsedTime; // Update the timer display
-    }, 1000); // 1000ms = 1 second
+        document.getElementById('score').textContent = 'Score: ' + elapsedTime; // Update the timer display
+        
+    }, 1000); 
 }
 
 // Stop the timer
@@ -149,5 +174,5 @@ function stopTimer() {
 function resetTimer() {
     stopTimer(); // Stop the timer if running
     elapsedTime = 0; // Reset elapsed time
-    document.getElementById('timer').textContent = elapsedTime; // Reset display
+    document.getElementById('score').textContent = elapsedTime; // Reset display
 }
