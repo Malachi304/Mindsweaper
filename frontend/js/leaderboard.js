@@ -4,7 +4,7 @@ function loadLeaderboard() {
     // Display a loading message while fetching data
     leaderboardDiv.innerHTML = 'Loading...';
 
-    fetch('../../backend/php/leaderboard.php')
+    fetch('../../backend/leaderboard.php')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {

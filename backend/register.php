@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $result = $conn->query($sql);
             if ($result) {
                 echo "User $name registered successfully";
-                header("Location: login.php");
+                header("Location: ../frontend/pages/login.html");
                 exit();
             }
         }

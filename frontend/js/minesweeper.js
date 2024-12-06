@@ -1,7 +1,7 @@
 // Game settings
-const rows = 5; // Number of rows
-const cols = 5; // Number of columns
-const numMines = 10; // Number of mines
+const rows = 10; // Number of rows
+const cols = 10; // Number of columns
+const numMines = 20; // Number of mines
 
 let board = []; // 2D array for the board
 let revealed = []; // Tracks revealed cells
@@ -87,7 +87,7 @@ function renderBoard() {
             td.dataset.col = c;
             td.addEventListener("click", handleCellClick);
             if (board[r][c] === "M") { // Check if cell contains a mine
-                td.textContent = "M"; // Display "M" if it's a mine
+                td.textContent = " "; // Display "M" if it's a mine
             }
             tr.appendChild(td);
         }
@@ -153,7 +153,7 @@ function revealCell(row, col) {
     
         const score = elapsedTime;
     
-        fetch('../../backend/php/leaderboard.php', {
+        fetch('../../backend/leaderboard.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
