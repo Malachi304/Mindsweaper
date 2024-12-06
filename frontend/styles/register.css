@@ -107,3 +107,19 @@ input{
     color: red;
     box-shadow: 3px 1px white;
 }
+
+input:focus:invalid + span:after{
+    content:"Invalid";
+    color: red;
+    margin: 0;
+}
+
+input:focus:valid + span:after{
+    content:"Good";
+    color: green;
+    padding: 20px;
+}
+
+h6{
+    font-size: 2em;
+}

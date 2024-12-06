@@ -16,7 +16,8 @@
             </div>
             <form  method="POST" action="../../backend/register.php">
                 <div class="input-group">
-                    <input type="text" name="name" id="user_name" placeholder="name" required>
+                    <input type="text" name="name" id="user_name" placeholder="name" required minlength="3">
+                    <span></span>
                     <label for="user_name"></label>
                 </div>
                 <div class="input-group">
