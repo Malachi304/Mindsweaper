@@ -1,14 +1,13 @@
 // Game settings
-const rows = 15; // Number of rows
-const cols = 15; // Number of columns
-const numMines = 30; // Number of mines
+const rows = 5; // Number of rows
+const cols = 5; // Number of columns
+const numMines = 10; // Number of mines
 
 let board = []; // 2D array for the board
 let revealed = []; // Tracks revealed cells
 
 // score elements
 let scoreDiv = document.getElementById("score");
-let score = 0;
 
 // Used to keep track of game state
 let click_count = 0;
@@ -19,7 +18,7 @@ let gameOver = false;
 function startGame() {
     // Reset game state
     gameOver = false;
-    cloick_count = 0;
+    click_count = 0;
     resetTimer();
     
     // Create the board
@@ -147,7 +146,36 @@ function revealCell(row, col) {
             }
         }
     }
-
+    if (hasWon()) {
+        stopTimer();
+        alert("Congratulations, you won! Check your score on the leaderboard.");
+        gameOver = true;
+    
+        const score = elapsedTime;
+    
+        fetch('../../backend/php/leaderboard.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ score })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    console.log('Score submitted successfully:', data);
+                    loadLeaderboard(); // Refresh the leaderboard
+                } else {
+                    console.error('Error submitting score:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    
+        return;
+    }
+    
 }
 
 let timer = null; // Stores the interval ID
@@ -175,4 +203,16 @@ function resetTimer() {
     stopTimer(); // Stop the timer if running
     elapsedTime = 0; // Reset elapsed time
     document.getElementById('score').textContent = elapsedTime; // Reset display
+}
+
+// Check if all non-mine cells have been revealed
+function hasWon() {
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            if (board[row][col] !== "M" && !revealed[row][col]) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
